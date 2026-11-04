@@ -1,0 +1,24 @@
+.navbar-tienda {
+    background-color: #212529;
+    padding: 15px 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+.marca-tienda {
+    color: white !important;
+    font-size: 25px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.navbar-tienda .nav-link {
+    color: #e9ecef !important;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 14px !important;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.navbar-tienda .nav-link:hover {
+    background-color: #343a40;
+    color: #ffffff !important;
+}
