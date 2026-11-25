@@ -1,0 +1,6 @@
+instlar librerias backend 
+
+npm i express mysql2 cors nodemon --save-dev 
+
+// es para instalar librerias de encriptado
+npm i bcrypt 
