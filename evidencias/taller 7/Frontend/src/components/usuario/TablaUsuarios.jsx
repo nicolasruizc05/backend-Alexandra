@@ -8,12 +8,10 @@ import Menu from "../Menu"
 export default function TablaUsuarios(){
     const [usuarios,setUsuarios]=useState([])
     const [mostrarModal, setMostrarModal] = useState(false)
-    const [usuarioEditar, setUsuarioEditar] = useState(null);
+    const [usuarioEditar, setUsuarioEditar] = useState(null)
     const consultarUsuarios = async ()=>{
             const respuesta = await fetch("http://localhost:3000/api/usuarios")
-            console.log("Estado HTTP:", respuesta.status);
             const datos = await respuesta.json()
-            console.log("Respuesta del servidor:", datos);
             setUsuarios(datos)
         }
     const eliminarUsuario = async (idUsuario) => {
@@ -21,21 +19,20 @@ export default function TablaUsuarios(){
         method: 'DELETE'
     })
 
-    const datos = await respuesta.json();
-    console.log(datos);
+    const datos = await respuesta.json()
+    console.log(datos)
 
     if (respuesta.ok) {
-        await consultarUsuarios();
+        await consultarUsuarios()
     }
 }
     useEffect(() => {
     const cargarUsuarios = async () => {
-        await consultarUsuarios();
-    };
+        await consultarUsuarios()
+    }
 
-    cargarUsuarios();
-}, []);
-console.log("Usuarios:", usuarios);
+    cargarUsuarios()
+}, [])
     return(
         <Container>
             <Menu></Menu>

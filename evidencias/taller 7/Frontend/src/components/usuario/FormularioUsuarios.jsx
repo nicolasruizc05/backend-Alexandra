@@ -18,19 +18,12 @@ export default function FormularioUsuarios({cerrarModal, consultarUsuarios}){
         body:JSON.stringify(formulario)
     })
          if (respuesta.ok) {
-            const datos = await respuesta.json();
-
-            console.log("Registro exitoso:", datos);
-
-            await consultarUsuarios();
-
-            console.log("Consulta terminada");
-
-            cerrarModal();
-
-            console.log("Modal cerrado");
+            const datos = await respuesta.json()
+            console.log("Registro exitoso:", datos)
+            await consultarUsuarios()
+            cerrarModal()
         } else {
-            console.log("Error al registrar:", respuesta.status);
+            console.log("Error al registrar:", respuesta.status)
         }
     }
     return(
